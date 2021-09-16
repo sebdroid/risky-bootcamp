@@ -50,21 +50,18 @@
               {{ numbers }}
               {% endif %}
             </p>
-            <form action="/" method="get">
-              <input class="button is-link" type="submit" value="More">
-            </form>
+              <a href="/" class="button is-link">More!</a>
             
           </div>
           <div class="column" {% if cookies %} style="overflow-y: scroll;max-height: 60vh;" {% endif %}>
             {% if cookies %}
             <p class="title">
-              Old numbers:
-              {% if cookies %}
-            <form action="/" method="post">
-              <input class="button is-danger" type="submit" value="Clear">
-            </form>
-            {% endif %}
+              Old Numbers:
+              <form action="/" method="post">
+                <input class="button is-danger" type="submit" value="Clear">
+              </form>
             </p>
+            
             <p class="subtitle">
               {% for cookie in cookies %}
               {{ cookie }}
